@@ -190,12 +190,14 @@ class BindMacros
 				res.push( {
 					name:FIELD_BINDINGS_NAME,
 					pos:Context.currentPos(),
+					meta: [{name: ":dox", params: [{ pos:Context.currentPos(), expr: EConst(CIdent("hide"))}], pos: Context.currentPos()}],
 					access: [APublic],
 					kind:FProp("default", "null", macro : bindx.BindSignal.FieldsBindSignal)
 				});
 				res.push( {
 					name:METHOD_BINDINGS_NAME,
 					pos:Context.currentPos(),
+					meta: [{name: ":dox", params: [{ pos:Context.currentPos(), expr: EConst(CIdent("hide"))}], pos: Context.currentPos()}],
 					access: [APublic],
 					kind:FProp("default", "null", macro : bindx.BindSignal.MethodsBindSignal)
 				});
